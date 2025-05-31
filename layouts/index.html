@@ -6,6 +6,6 @@
 
 <h2>{{ .Params.section.heading }}</h2>
 
-<p>{{ .Params.section.text }}</p>
+<p>{{ .Params.section.text | safeHTML }}</p>
 
 {{ partial "footer.html" . }}
