@@ -1,15 +1,19 @@
 /* LAYOUT */
-
 body {
-  color: #333;
-  font-size: 125%;
-  line-height: 1.5;
-  max-width: 45rem;
-  padding: 1rem;
+  color: var(--body-text-color);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-primary);
+  line-height: 1.6;
+  max-width: var(--width-max);
+  padding: 20px;
   margin: 0 auto;
+  background-color: var(--body-bg-color);
 }
 
 .post-title {
+  font-family: var(--font-heading);
+  color: var(--bold-text-color);
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
@@ -17,6 +21,8 @@ body {
   display: block;
   margin-bottom: 2rem;
   font-style: italic;
+  color: var(--link-visited-color);
+  font-size: var(--font-size-secondary);
 }
 
 .content {
@@ -25,22 +31,35 @@ body {
 
 img {
   max-width: 100%;
+  border: 1px solid var(--img-border-color);
 }
 
 /* NAVIGATION */
-
 .site-nav {
   display: flex;
+  border-bottom: 1px solid var(--table-border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .site-nav a {
   display: block;
   padding: 1rem;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: var(--bold-text-color);
+  text-decoration: underline;
 }
 
 .site-nav .logo {
-  font-weight: bold;
+  font-family: var(--font-heading);
+  font-weight: 700;
   padding-left: 0;
+  color: var(--bold-text-color);
 }
 
 .main-menu {
@@ -48,8 +67,28 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-family: var(--font-primary);
 }
 
+/* LISTS */
+.post-snippet {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--table-border-color);
+}
+
+.post-snippet h3 {
+  font-family: var(--font-heading);
+  color: var(--bold-text-color);
+  margin-bottom: 0.5rem;
+}
+
+.post-snippet time {
+  color: var(--link-visited-color);
+  font-size: var(--font-size-secondary);
+}
+
+/* RESPONSIVE */
 @media screen and (max-width: 48rem) {
   .site-nav,
   .main-menu {
@@ -57,17 +96,11 @@ img {
   }
 
   .site-nav a {
-    padding: 0.5rem;
-    padding-left: 0;
+    padding: 0.5rem 0;
   }
-}
-
-/* LISTS */
-
-.post-snippet {
-  margin-bottom: 1rem;
-}
-
-.post-snippet h3 {
-  margin-bottom: 0.25rem;
+  
+  body {
+    font-size: calc(var(--font-size-primary) * 0.9);
+    padding: 15px;
+  }
 }
