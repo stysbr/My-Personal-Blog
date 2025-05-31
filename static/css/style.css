@@ -14,7 +14,7 @@ body {
 }
 
 .post-title {
-  font-family: 'Lora', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: #e0e0e0;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -48,7 +48,7 @@ img {
 }
 
 .site-nav .logo {
-  font-family: 'Lora', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
   padding-left: 0;
   color: #e0e0e0;
@@ -81,7 +81,7 @@ img {
 }
 
 .post-snippet h3 {
-  font-family: 'Lora', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: #e0e0e0;
   margin-bottom: 0.25rem;
 }
