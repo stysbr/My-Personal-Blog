@@ -87,11 +87,9 @@ img {
 }
 
 a:link {
-  color: #e0e0e0;
-  text-decoration: none;
+  color: #8cc2dd;
 }
 
 a:visited {
-  color: #909090;
-  text-decoration: none;
+  color: #8cc2dd;
 }
