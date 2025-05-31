@@ -85,3 +85,13 @@ img {
   color: #e0e0e0;
   margin-bottom: 0.25rem;
 }
+
+a:link {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #909090;
+  text-decoration: none;
+}
