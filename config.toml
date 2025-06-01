@@ -18,6 +18,12 @@ title = "Alfan Mohammad"
     name = "About"
     url = "/about"
     weight = 20
+
+[[menu.main]]
+  name = "Guestbook"
+  url = "/guestbook/"
+  weight = 30
+
     
 [taxonomies]
   tag = "tags"
