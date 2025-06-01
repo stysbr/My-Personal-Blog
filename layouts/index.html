@@ -16,13 +16,18 @@
 
   <!-- Bagian 5 post terbaru -->
   <section class="recent-posts">
-    <h2>Tulisan Terbaru</h2>
+    <h2>Postingan Terbaru</h2>
     <ul class="post-titles">
-      {{ range first 5 (where .Site.RegularPages "Type" "post" | sort .Date "desc") }}
+      {{ $posts := where site.RegularPages "Type" "in" site.Params.mainSections }}
+      {{ if not $posts }}
+        {{ $posts = where site.RegularPages "Type" "==" "post" }}
+      {{ end }}
+      {{ range first 5 (sort $posts "Date" "desc") }}
         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ else }}
+        <li>Tidak ada postingan tersedia</li>
       {{ end }}
     </ul>
   </section>
-</main>
 
 {{ partial "footer.html" . }}
