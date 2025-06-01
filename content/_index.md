@@ -11,9 +11,9 @@ section:
 
     <br>
 
-    Karena itu, melalui halaman ini saya ingin menulis dan mendokumentasikan berbagai hal menarik yang saya temui.
+    Di halaman ini saya akan mendokumentasikan berbagai hal menarik yang saya temui.
 
-    Tujuan utamanya adalah membiasakan diri menulis sekaligus mengarsipkan perjalanan belajar dan pengalaman yang menurut saya menarik.
+    Tujuan utamanya adalah membiasakan diri menulis sekaligus mengarsipkan perjalanan belajar saya.
 
     <br>
 
