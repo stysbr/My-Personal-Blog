@@ -1,0 +1,58 @@
+<div class="upvote-container">
+  <button id="upvote-btn" data-post-id="{{ .File.UniqueID }}">
+    <span id="upvote-count">0</span> 👍
+  </button>
+</div>
+
+<style>
+  .upvote-container { margin: 20px 0; }
+  #upvote-btn {
+    padding: 8px 16px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  #upvote-btn.upvoted { background: #4CAF50; color: white; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('upvote-btn');
+  const countEl = document.getElementById('upvote-count');
+  const postId = btn.dataset.postId;
+  const apiUrl = 'https://upvote-api.<your-subdomain>.workers.dev';
+
+  // Cek status awal
+  fetch(`${apiUrl}/count?post=${postId}`)
+    .then(res => res.json())
+    .then(data => {
+      if(data.code === 0) {
+        countEl.textContent = data.data.count;
+        if(data.data.hasUpvoted) btn.classList.add('upvoted');
+      }
+    });
+
+  // Handle klik
+  btn.addEventListener('click', () => {
+    const isUpvoted = btn.classList.contains('upvoted');
+    const diff = isUpvoted ? -1 : 1;
+
+    fetch(`${apiUrl}/upvote`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ postId, diff })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if(data.code === 0) {
+        const currentCount = parseInt(countEl.textContent);
+        countEl.textContent = currentCount + diff;
+        btn.classList.toggle('upvoted');
+      } else {
+        alert(data.msg);
+      }
+    });
+  });
+});
+</script>
