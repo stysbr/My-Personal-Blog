@@ -1,7 +1,5 @@
 ---
 title: "Guestbook"
-draft: false
-type: "page"
 ---
 
 <script async src="https://guestbooks.meadow.cafe/resources/js/embed_script/641/script.js"></script> 
