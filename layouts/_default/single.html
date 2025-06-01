@@ -18,10 +18,12 @@
   </div>
 {{ end }}
 
+{{ if and (eq .Kind "page") (eq .Section "posts") }}
 <div style="display: flex; gap: 1rem;">
   {{ partial "upvote.html" . }}
   {{ partial "traktir-kopi.html" . }}
 </div>
+{{ end }}
 
 
 {{ partial "footer.html" . }}
