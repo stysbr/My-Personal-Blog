@@ -5,9 +5,10 @@ blurb: |-
   Freelancing, No Code / Low Code Tools, AI, Desain, Indieweb, Open Source.
 section:
   text: >-
-    Saya adalah seorang freelance desainer grafis.
-
-    Salah satu tantangan terbesar yang saya hadapi adalah kesulitan untuk fokus pada satu bidang saja. Setiap kali melihat sesuatu yang menarik perhatian, saya terdorong untuk terus mengeksplorasinya, mulai dari desain, ilustrasi, web development, automasi, digital marketing, apapun.
+    Saya adalah orang yang sulit fokus pada satu bidang saja. Setiap kali
+    melihat sesuatu yang menarik perhatian, saya terdorong untuk
+    mengeksplorasinya, yang berkaitan dengan desain, ilustrasi, web development,
+    automasi, digital marketing, dan teknologi.
 
     <br>
 
