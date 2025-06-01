@@ -18,6 +18,9 @@ title = "Alfan Mohammad"
     name = "About"
     url = "/about"
     weight = 20
+    
+[taxonomies]
+  tag = "tags"
 
   [params]
   [params.Footer]
