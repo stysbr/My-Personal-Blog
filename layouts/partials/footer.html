@@ -1,7 +1,26 @@
 </main>
 	
 <footer>
-	<p>&copy;{{ dateFormat "2006" now }} {{ .Site.Title }}</p>
+  <p>&copy;{{ dateFormat "2006" now }} {{ .Site.Title }}</p>
+  
+  {{ if ne .Site.Params.Footer.hideRSSAndEmail true }}
+    <!-- Enable RSS and email exists -->
+    {{ if and ( ne .Site.Params.RSS.enableRSS false ) .Site.Params.Author.email }}
+    <p>Subscribe via <a href="/index.xml">RSS</a> or just <a href="mailto:{{ .Site.Params.Author.email }}">say hello</a></p>
+    {{ end }}
+    <!-- Enable RSS and email does not exists -->
+    {{ if and ( ne .Site.Params.RSS.enableRSS false ) (not .Site.Params.Author.email) }}
+    <p>Subscribe via <a href="/index.xml">RSS</a></p>
+    {{ end }}
+    <!-- Do not enable RSS and email exists -->
+    {{ if and ( ne .Site.Params.RSS.enableRSS true ) .Site.Params.Author.email }}
+    <p>Say hello via <a href="mailto:{{ .Site.Params.Author.email }}">email</a></p>
+    {{ end }}
+  {{ end }}
+
+  {{ if ne .Site.Params.Footer.hideSitemap true }}
+  <p>🗺️ <a href="/sitemap.xml">Sitemap</a></p>
+  {{ end }}
 </footer>
 
 <script>
