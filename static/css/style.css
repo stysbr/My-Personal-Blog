@@ -105,13 +105,18 @@ a:visited {
 
 .post-titles li {
   display: flex;
-  gap: 1rem; /* jarak antara tanggal dan judul */
-  align-items: center;
+  align-items: center; /* ini yang memastikan sejajar vertikal */
+  gap: 0.75rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
 }
 
 .post-date {
-  color: #e0e0e0;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
+  font-style: normal; /* hilangkan italic */
+  color: #bbb; /* abu-abu terang untuk dark mode */
+  font-weight: 500;
   white-space: nowrap;
 }
+
 
