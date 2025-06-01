@@ -13,10 +13,18 @@ body {
   font-weight: 400;
 }
 
-.post-title {
+h1 {
+  font-size: 2.5rem; /* 40px equivalent (40/16 = 2.5) */
+  font-weight: 700;
   font-family: 'Source Sans Pro', sans-serif;
   color: #e0e0e0;
-  font-weight: 600;
+}
+
+.post-title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2.5rem;
+  color: #e0e0e0;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
