@@ -1,6 +1,9 @@
 ---
 title: Kuantitas > Kualitas
 date: 2025-06-01T00:07:15.935Z
+tags:
+  - insight
+  - freelancing
 image: yudha-aprilian-3hz3qoytfn4-unsplash-1-.webp
 ---
 <!--StartFragment-->
