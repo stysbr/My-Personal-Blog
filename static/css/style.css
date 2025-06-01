@@ -20,19 +20,20 @@ h1 {
   color: #e0e0e0;
 }
 
-.post-title {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 2.5rem;
-  color: #e0e0e0;
-  font-weight: 700;
-  margin-bottom: 1rem;
+.post-titles li {
+  display: flex;
+  align-items: center; /* ini yang memastikan sejajar vertikal */
+  gap: 0.75rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
 }
 
 .post-date {
-  display: block;
-  margin-bottom: 2rem;
-  font-style: italic;
-  color: #787878;
+  font-size: 0.95rem;
+  font-style: normal; /* hilangkan italic */
+  color: #bbb; /* abu-abu terang untuk dark mode */
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 .content {
