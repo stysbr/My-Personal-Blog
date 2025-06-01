@@ -1,6 +1,6 @@
 ---
 title: Homepage
-blurb: Terimakasih
+blurb: Catatan pribadi tentang perjalanan saya untuk bertahan di Internet.
 section:
   text: >-
     Saat pertama kali saya mengunjungi sebuah platform bernama <a
