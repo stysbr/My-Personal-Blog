@@ -101,3 +101,16 @@ a:link {
 a:visited {
   color: #8cc2dd;
 }
+
+.post-titles li {
+  display: flex;
+  gap: 1rem; /* jarak antara tanggal dan judul */
+  align-items: center;
+}
+
+.post-date {
+  color: #777;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
