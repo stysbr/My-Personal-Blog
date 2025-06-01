@@ -8,7 +8,7 @@
 	<img src="{{ .Params.image }}" >
 {{ end }}
 
-{{ .Content }}
+{{ .Content | safeHTML }}
 
 {{ with .Params.tags }}
   <div class="tags">
