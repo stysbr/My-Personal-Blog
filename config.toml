@@ -12,3 +12,14 @@ title = "Alfan Mohammad"
     name = "About"
     url = "/about"
     weight = 20
+
+  [params]
+  [params.Footer]
+    hideRSSAndEmail = false
+    hideSitemap = false
+  
+  [params.RSS]
+    enableRSS = true
+
+[Author]
+  email = "muhalfan1505@gmail.com"
