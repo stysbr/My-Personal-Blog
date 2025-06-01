@@ -93,38 +93,3 @@ a:link {
 a:visited {
   color: #8cc2dd;
 }
-
-/* Container untuk kedua tombol */
-.action-buttons {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
-  margin: 2rem 0;
-}
-
-/* Style tombol traktir */
-.traktir-button {
-  display: inline-block;
-}
-
-.traktir-link {
-  display: inline-block;
-  padding: 8px 16px;
-  background: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  color: #333;
-}
-
-.traktir-link:hover {
-  background: #e0e0e0;
-}
-
-/* Pastikan tombol upvote tetap memiliki style aslinya */
-.upvote-container {
-  margin: 0; /* Reset margin karena sudah diatur di parent */
-}
