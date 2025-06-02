@@ -31,5 +31,3 @@ title: "Guestbook"
 <div id="guestbooks___guestbook-made-with" style="text-align: right;">
 </div>  
 <hr style="margin: 1em 0;"/>
-<h3 id="guestbooks___guestbook-messages-header">Messages</h3>
-<div id="guestbooks___guestbook-messages-container"></div>  
