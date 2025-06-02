@@ -22,6 +22,13 @@ title: "Guestbook"
     </form>
 </div>
 <div id="guestbooks___guestbook-made-with" style="text-align: right;">
+    <small>Made with <a target="_blank" href="https://guestbooks.meadow.cafe">Guestbooks</a></small>
+</div>  
+<hr style="margin: 1em 0;"/>
+<h3 id="guestbooks___guestbook-messages-header">Messages</h3>
+<div id="guestbooks___guestbook-messages-container"></div>  
+</div>
+<div id="guestbooks___guestbook-made-with" style="text-align: right;">
     <small>Lovingly made with <a target="_blank" href="https://guestbooks.meadow.cafe">Guestbooks</a></small>
 </div>  
 <hr style="margin: 1em 0;"/>
