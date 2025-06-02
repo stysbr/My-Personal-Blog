@@ -38,3 +38,9 @@ title = "Alfan Mohammad"
 
 [Author]
   email = "muhalfan1505@gmail.com"
+
+  [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
