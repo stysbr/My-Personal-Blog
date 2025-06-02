@@ -2,10 +2,12 @@
 
 <h1 class="post-title">{{ .Title }}</h1>
 
-<span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
+{{ if and (.IsPage) (eq .Section "posts") }}
+  <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
+{{ end }}
 
 {{ if .Params.image }}
-	<img src="{{ .Params.image }}" >
+  <img src="{{ .Params.image }}" >
 {{ end }}
 
 {{ .Content | safeHTML }}
@@ -19,11 +21,10 @@
 {{ end }}
 
 {{ if and (eq .Kind "page") (eq .Section "posts") }}
-<div style="display: flex; gap: 1rem;">
-  {{ partial "upvote.html" . }}
-  {{ partial "traktir-kopi.html" . }}
-</div>
+  <div style="display: flex; gap: 1rem;">
+    {{ partial "upvote.html" . }}
+    {{ partial "traktir-kopi.html" . }}
+  </div>
 {{ end }}
-
 
 {{ partial "footer.html" . }}
