@@ -20,20 +20,19 @@ h1 {
   color: #e0e0e0;
 }
 
-.post-titles li {
-  display: flex;
-  align-items: center; /* ini yang memastikan sejajar vertikal */
-  gap: 0.75rem;
-  line-height: 1.4;
-  margin-bottom: 0.75rem;
+.post-title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2.5rem;
+  color: #e0e0e0;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .post-date {
-  font-size: 0.95rem;
-  font-style: normal; /* hilangkan italic */
-  color: #bbb; /* abu-abu terang untuk dark mode */
-  font-weight: 500;
-  white-space: nowrap;
+  display: block;
+  margin-bottom: 2rem;
+  font-style: italic;
+  color: #787878;
 }
 
 .content {
@@ -102,21 +101,3 @@ a:link {
 a:visited {
   color: #8cc2dd;
 }
-
-.post-titles li {
-  display: flex;
-  align-items: center; /* ini yang memastikan sejajar vertikal */
-  gap: 0.75rem;
-  line-height: 1.4;
-  margin-bottom: 0.75rem;
-}
-
-.post-date {
-  font-size: 0.95rem;
-  font-style: normal; /* hilangkan italic */
-  color: #bbb; /* abu-abu terang untuk dark mode */
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-
