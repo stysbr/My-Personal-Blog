@@ -24,7 +24,6 @@
   {{ end }}
   {{ range first 5 (sort $posts "Date" "desc") }}
     <li>
-      <span class="post-date">{{ .Date.Format "02 Jan 2006" }}</span>
       <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </li>
   {{ else }}
