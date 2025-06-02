@@ -35,6 +35,14 @@ h1 {
   color: #787878;
 }
 
+.post-titles {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
 .content {
   margin-bottom: 2rem;
 }
