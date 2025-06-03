@@ -49,3 +49,7 @@ title = "Alfan Mohammad"
     [markup.goldmark.renderer]
       unsafe = true
 
+[params]
+    google_analytics = "G-XXXXXXXXXX"
+
+
