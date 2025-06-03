@@ -13,7 +13,7 @@ Berencana untuk membuat konten di sosial media lain, tapi latihan dulu di blog i
 Jadi, terima kasih sudah berkunjung!
 <br><br>
 <h2>Let's Connect!</h2>
-<div class="social-links" style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+<div class="social-links">
   <a href="https://instagram.com/alfanmohammad_" target="_blank">📸 Instagram</a><br>
   <a href="https://linkedin.com/in/mohalfan" target="_blank">💼 LinkedIn</a><br>
   <a href="https://www.threads.net/@alfanmohammad_" target="_blank">🧵 Threads</a><br>
