@@ -13,8 +13,11 @@ Berencana untuk membuat konten di sosial media lain, tapi latihan dulu di blog i
 Jadi, terima kasih sudah berkunjung!
 <br><br>
 <h2>Let's Connect!</h2>
-[📸 Instagram](https://instagram.com/alfanmohammad_)
-[💼 LinkedIn](https://linkedin.com/in/mohalfan)
-[🧵 Threads](https://www.threads.net/@alfanmohammad_)
-[🐦 X (Twitter)](https://x.com/mohalfan_)
-[🎨 Behance](https://www.behance.net/alvanzip)
+<div class="social-links" style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+  <a href="https://instagram.com/alfanmohammad_" target="_blank">📸 Instagram</a><br>
+  <a href="https://linkedin.com/in/mohalfan" target="_blank">💼 LinkedIn</a><br>
+  <a href="https://www.threads.net/@alfanmohammad_" target="_blank">🧵 Threads</a><br>
+  <a href="https://x.com/mohalfan_" target="_blank">🐦 X (Twitter)</a><br>
+  <a href="https://www.behance.net/alvanzip" target="_blank">🎨 Behance</a><br>
+</div>
+
