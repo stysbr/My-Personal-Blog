@@ -2,16 +2,17 @@ baseURL = "https://blog.mohalfan.my.id/"
 title = "Alfan Mohammad"
 languageCode = "id-ID"
 defaultContentLanguage = "id"
-theme = "Bear Blog Wannabe"
+theme = "PaperMod"
 enableRobotsTXT = true
 
-[Author]
+[author]
   email = "muhalfan1505@gmail.com"
 
 [taxonomies]
   tag = "tags"
 
 [menu]
+
   [[menu.main]]
     identifier = "home"
     name = "Home"
@@ -46,17 +47,17 @@ enableRobotsTXT = true
   keywords = ["desain", "ilustrasi", "web development", "freelancer"]
   google_analytics = "G-0G9SMH8JWB"
 
-  [params.Footer]
+  [params.footer]
     hideRSSAndEmail = false
     hideSitemap = false
 
-  [params.RSS]
+  [params.rss]
     enableRSS = true
 
   [params.opengraph]
     site_name = "Alfan Mohammad"
     type = "website"
-    image = "/images/og-image.jpg"  # Ganti sesuai path gambar OG milikmu
+    image = "/images/og-image.jpg"
 
 [sitemap]
   changefreq = "daily"
