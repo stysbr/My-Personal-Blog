@@ -1,0 +1,28 @@
+{{ $title := .Title }}
+{{ if not .IsHome }}
+  {{ $title = printf "%s | %s" .Title .Site.Title }}
+{{ else }}
+  {{ $title = .Site.Title }}
+{{ end }}
+
+{{ $description := or .Params.description .Site.Params.description }}
+{{ $keywords := or (delimit .Params.keywords ", ") (delimit .Site.Params.keywords ", ") }}
+
+<title>{{ $title | safeHTML }}</title>
+<meta name="description" content="{{ $description | safeHTML }}" />
+<meta name="keywords" content="{{ $keywords | safeHTML }}" />
+<meta name="author" content="{{ .Site.Params.author }}" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
+<meta property="og:type" content="{{ or .Site.Params.opengraph.type "website" }}" />
+<meta property="og:site_name" content="{{ .Site.Params.opengraph.site_name }}" />
+<meta property="og:image" content="{{ with or .Params.image .Site.Params.opengraph.image }}{{ . | absURL }}{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}" />
+<meta name="twitter:image" content="{{ with or .Params.image .Site.Params.opengraph.image }}{{ . | absURL }}{{ end }}" />
