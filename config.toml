@@ -1,4 +1,15 @@
+baseURL = "https://blog.mohalfan.my.id/"
 title = "Alfan Mohammad"
+languageCode = "id-ID"
+theme = "Bear Blog Wannabe"
+defaultContentLanguage = "id"
+enableRobotsTXT = true
+
+[Author]
+  email = "muhalfan1505@gmail.com"
+
+[taxonomies]
+  tag = "tags"
 
 [menu]
   [[menu.main]]
@@ -29,10 +40,10 @@ title = "Alfan Mohammad"
     url = "/guestbook/"
     weight = 30
 
-[taxonomies]
-  tag = "tags"
-
 [params]
+  description = "Blog personal tentang desain dan teknologi."
+  author = "Alfan Mohammad"
+  keywords = ["desain", "ilustrasi", "web development", "freelancer"]
   google_analytics = "G-0G9SMH8JWB"
 
   [params.Footer]
@@ -42,8 +53,15 @@ title = "Alfan Mohammad"
   [params.RSS]
     enableRSS = true
 
-[Author]
-  email = "muhalfan1505@gmail.com"
+  [params.opengraph]
+    site_name = "Alfan Mohammad"
+    type = "website"
+    image = "/images/og-image.jpg" # Ganti sesuai file og-image milikmu
+
+[sitemap]
+  changefreq = "daily"
+  priority = 0.5
+  filename = "sitemap.xml"
 
 [markup]
   [markup.goldmark]
