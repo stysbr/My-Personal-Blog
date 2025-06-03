@@ -1,12 +1,12 @@
 title = "Alfan Mohammad"
 
 [menu]
-[[menu.main]]
+  [[menu.main]]
     identifier = "home"
     name = "Home"
     url = "/"
     weight = 1
-    
+
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
@@ -17,39 +17,35 @@ title = "Alfan Mohammad"
     name = "Now"
     url = "/now"
     weight = 15
-    
+
   [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about"
     weight = 20
 
-[[menu.main]]
-  name = "Guestbook"
-  url = "/guestbook/"
-  weight = 30
+  [[menu.main]]
+    name = "Guestbook"
+    url = "/guestbook/"
+    weight = 30
 
-    
 [taxonomies]
   tag = "tags"
 
-  [params]
+[params]
+  google_analytics = "G-0G9SMH8JWB"
+
   [params.Footer]
     hideRSSAndEmail = false
     hideSitemap = false
-  
+
   [params.RSS]
     enableRSS = true
 
 [Author]
   email = "muhalfan1505@gmail.com"
 
-  [markup]
+[markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
-[params]
-    google_analytics = "G-0G9SMH8JWB"
-
-
