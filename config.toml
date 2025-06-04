@@ -2,7 +2,7 @@ baseURL = "https://blog.mohalfan.my.id/"
 title = "Alfan Mohammad"
 languageCode = "id-ID"
 defaultContentLanguage = "id"
-theme = "PaperMod"
+theme = "Bareblog"
 enableRobotsTXT = true
 
 [author]
