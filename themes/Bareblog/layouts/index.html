@@ -1,0 +1,34 @@
+{{ partial "header.html" . }}
+
+<main>
+  <!-- Bagian konten utama dari front matter -->
+  <section class="intro">
+    <h1>{{ .Params.title }}</h1>
+    <p class="blurb">{{ .Params.blurb }}</p>
+    
+    {{ if .Params.section }}
+    <div class="featured-section">
+      <h2>{{ .Params.section.heading }}</h2>
+      <p>{{ .Params.section.text | safeHTML }}</p>
+    </div>
+    {{ end }}
+  </section>
+
+  <!-- Bagian 5 post terbaru -->
+  <section class="recent-posts">
+    <h2>Tulisan Terbaru</h2>
+  <ul class="post-titles">
+  {{ $posts := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ if not $posts }}
+    {{ $posts = where site.RegularPages "Type" "==" "post" }}
+  {{ end }}
+  {{ range first 5 (sort $posts "Date" "desc") }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+  {{ else }}
+    <li>Tidak ada postingan tersedia</li>
+  {{ end }}
+</ul>
+  </section>
+{{ partial "footer.html" . }}

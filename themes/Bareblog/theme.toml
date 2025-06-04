@@ -1,0 +1,17 @@
+name = "Bareblog"
+license = "MIT"
+description = "Tema Hugo simpel dan ringan, fokus pada konten dengan minim JavaScript. Cocok untuk blog pribadi yang responsif dan SEO-friendly."
+homepage = "https://github.com/mohalfan/bareblog"
+tags = ["blog", "responsive", "minimal", "personal", "seo", "netlify-cms"]
+features = ["SEO", "Responsive", "Like Bearblog", "Netlify CMS compatible", "Google Analytics support", "Open Graph and Twitter Cards"]
+
+[author]
+  name = "Alfan Mohammad"
+  homepage = "https://blog.mohalfan.my.id"
+
+[original]
+  name = "Eric Murphy"
+  homepage = "https://github.com/ericmurphyxyz/hugo-starter-netlify-cms"
+
+[params]
+  screenshot = "images/screenshot.png"

@@ -1,0 +1,51 @@
+<header class="site-header">
+  <div class="header-content">
+    <a class="logo" href="/">
+      {{ .Site.Title }}
+    </a>
+    <nav class="site-nav">
+      <ul class="main-menu">
+        {{ range.Site.Menus.main }}
+        <li>
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+  }
+  
+  .main-menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.8rem;
+  }
+  
+  .main-menu a {
+    text-decoration: none;
+  }
+</style>
