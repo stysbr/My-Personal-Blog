@@ -1,19 +1,35 @@
 {{ $title := .Title }}
 {{ if not .IsHome }}
-  {{ $title = printf "%s | %s" .Title .Site.Title }}
+  {{ $title = printf "%s | %s" .Title .Site.Title }}
 {{ else }}
-  {{ $title = .Site.Title }}
+  {{ $title = .Site.Title }}
 {{ end }}
 
 {{ $description := or .Params.description .Site.Params.description }}
-{{ $keywords := or (delimit .Params.keywords ", ") (delimit .Site.Params.keywords ", ") }}
+
+{{/* Perbaikan untuk keywords: Periksa jika .Params.keywords ada dan jika .Site.Params.keywords ada, baru gunakan delimit */}}
+{{ $keywords := "" }}
+{{ if .Params.keywords }}
+    {{ if reflect.IsSlice .Params.keywords }} {{/* Pastikan .Params.keywords adalah slice/array */}}
+        {{ $keywords = delimit .Params.keywords ", " }}
+    {{ else if reflect.IsString .Params.keywords }} {{/* Jika salah diatur sebagai string, gunakan langsung */}}
+        {{ $keywords = .Params.keywords }}
+    {{ end }}
+{{ else if .Site.Params.keywords }}
+    {{ if reflect.IsSlice .Site.Params.keywords }} {{/* Pastikan .Site.Params.keywords adalah slice/array */}}
+        {{ $keywords = delimit .Site.Params.keywords ", " }}
+    {{ else if reflect.IsString .Site.Params.keywords }} {{/* Jika salah diatur sebagai string, gunakan langsung */}}
+        {{ $keywords = .Site.Params.keywords }}
+    {{ end }}
+{{ end }}
 
 <title>{{ $title | safeHTML }}</title>
 <meta name="description" content="{{ $description | safeHTML }}" />
+{{ if $keywords }} {{/* Hanya tampilkan meta keywords jika $keywords tidak kosong */}}
 <meta name="keywords" content="{{ $keywords | safeHTML }}" />
+{{ end }}
 <meta name="author" content="{{ .Site.Params.author }}" />
 
-<!-- Open Graph -->
 <meta property="og:title" content="{{ $title }}" />
 <meta property="og:description" content="{{ $description }}" />
 <meta property="og:type" content="{{ or .Site.Params.opengraph.type "website" }}" />
@@ -21,7 +37,6 @@
 <meta property="og:image" content="{{ with or .Params.image .Site.Params.opengraph.image }}{{ . | absURL }}{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{ $title }}" />
 <meta name="twitter:description" content="{{ $description }}" />
