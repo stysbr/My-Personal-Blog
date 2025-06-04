@@ -5,67 +5,71 @@ defaultContentLanguage = "id"
 theme = "Bareblog"
 enableRobotsTXT = true
 
-#[author]
-  #email = "muhalfan1505@gmail.com"
+#[author] # Sudah dikomentari, ini bagus. Biarkan saja.
+#   #email = "muhalfan1505@gmail.com"
 
 [taxonomies]
-  tag = "tags"
+  tag = "tags"
 
 [menu]
 
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
 
-  [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts"
-    weight = 10
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts"
+    weight = 10
 
-  [[menu.main]]
-    name = "Now"
-    url = "/now"
-    weight = 15
+  [[menu.main]]
+    name = "Now"
+    url = "/now"
+    weight = 15
 
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about"
-    weight = 20
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+    weight = 20
 
-  [[menu.main]]
-    name = "Guestbook"
-    url = "/guestbook/"
-    weight = 30
+  [[menu.main]]
+    name = "Guestbook"
+    url = "/guestbook/"
+    weight = 30
 
 [params]
-  description = "Blog personal tentang desain dan teknologi."
-[params.author]
-  author = "Alfan Mohammad"
-  keywords = ["desain", "ilustrasi", "web development", "freelancer"]
-  google_analytics = "G-0G9SMH8JWB"
+  description = "Blog personal tentang desain dan teknologi."
+  # -- MULAI PERBAIKAN DI SINI --
+  [params.author] # Ini sudah benar, mendeklarasikan 'author' sebagai tabel di bawah 'params'
+    name = "Alfan Mohammad" # <-- Ubah 'author' menjadi 'name' untuk nama penulis
+    email = "muhalfan1505@gmail.com" # <-- Tambahkan ini untuk email penulis
 
-  [params.footer]
-    hideRSSAndEmail = false
-    hideSitemap = false
+  keywords = ["desain", "ilustrasi", "web development", "freelancer"] # <-- Pindahkan ini langsung di bawah [params]
+  google_analytics = "G-0G9SMH8JWB" # <-- Pindahkan ini langsung di bawah [params]
+  # -- AKHIR PERBAIKAN DI SINI --
 
-  [params.rss]
-    enableRSS = true
+  [params.footer]
+    hideRSSAndEmail = false
+    hideSitemap = false
 
-  [params.opengraph]
-    site_name = "Alfan Mohammad"
-    type = "website"
-    image = "/images/og-image.jpg"
+  [params.rss]
+    enableRSS = true
+
+  [params.opengraph]
+    site_name = "Alfan Mohammad"
+    type = "website"
+    image = "/images/og-image.jpg"
 
 [sitemap]
-  changefreq = "daily"
-  priority = 0.5
-  filename = "sitemap.xml"
+  changefreq = "daily"
+  priority = 0.5
+  filename = "sitemap.xml"
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
