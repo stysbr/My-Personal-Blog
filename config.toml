@@ -5,8 +5,8 @@ defaultContentLanguage = "id"
 theme = "Bareblog"
 enableRobotsTXT = true
 
-[author]
-  email = "muhalfan1505@gmail.com"
+#[author]
+  #email = "muhalfan1505@gmail.com"
 
 [taxonomies]
   tag = "tags"
@@ -43,6 +43,7 @@ enableRobotsTXT = true
 
 [params]
   description = "Blog personal tentang desain dan teknologi."
+[params.author]
   author = "Alfan Mohammad"
   keywords = ["desain", "ilustrasi", "web development", "freelancer"]
   google_analytics = "G-0G9SMH8JWB"
