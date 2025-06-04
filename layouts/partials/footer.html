@@ -4,7 +4,7 @@
   <div style="margin-bottom: 0.8rem;">
     {{ if ne .Site.Params.Footer.hideRSSAndEmail true }}
       <!-- Enable RSS and email exists -->
-      {{ if and ( ne .Site.Params.RSS.enableRSS false ) .Site.Params.Author.email }}
+      {{ if and ( ne .Site.Params.RSS.enableRSS false ) .Site.Author.email }}
       <p style="margin: 0.3rem 0;">Subscribe via <a href="/index.xml">RSS</a> or just <a href="mailto:{{ .Site.Params.Author.email }}">say hello</a></p>
       {{ end }}
       <!-- Enable RSS and email does not exists -->
