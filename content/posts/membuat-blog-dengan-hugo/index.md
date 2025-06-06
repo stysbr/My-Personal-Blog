@@ -1,6 +1,6 @@
 ---
 title: Membuat Blog dengan Hugo
-date: 2025-06-07
+date: 2025-06-07T07:00:00+07:00
 tags:
   - blogging
   - personalblog
