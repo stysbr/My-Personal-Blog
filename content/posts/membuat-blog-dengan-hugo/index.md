@@ -16,7 +16,7 @@ keywords:
   - personalblog
   - indieweb
 ---
-Waktu pertama kali menemukan platform blogging bernama Bearblog, saya langsung tertarik. Tagline-nya yang bold “No trackers, no JavaScript, no stylesheets. Just your words.”
+Waktu pertama kali menemukan platform blogging bernama Bearblog, saya langsung tertarik. Tagline-nya yang bold “No trackers, no JavaScript, no stylesheets. Just your words."
 seolah menjelaskan dengan jelas alasan kenapa platform ini perlu ada. Fokus utamanya adalah tulisan, bukan hal-hal lain yang sering kali mengganggu pengalaman menulis.
 
 > “No trackers, no JavaScript, no stylesheets. Just your words.”
