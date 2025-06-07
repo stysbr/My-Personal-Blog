@@ -109,3 +109,75 @@ a:link {
 a:visited {
   color: #8cc2dd;
 }
+
+.site-header {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.8rem;
+}
+
+.main-menu a {
+  text-decoration: none;
+}
+
+/* --- Tambahan untuk Tampilan Mobile (Media Query) --- */
+@media (max-width: 768px) { /* Umumnya digunakan untuk breakpoint tablet/mobile */
+  .header-content {
+    flex-direction: column; /* Pastikan konten header tetap menumpuk vertikal */
+    padding: 0 1rem; /* Tambahkan sedikit padding agar tidak terlalu mepet tepi */
+  }
+
+  .main-menu {
+    flex-wrap: wrap; /* Ini yang membuat item pecah baris */
+    justify-content: center; /* Pusatkan item menu */
+    gap: 0.6rem 1rem; /* Atur jarak vertikal dan horizontal antar item */
+    margin-top: 0.5rem; /* Beri sedikit jarak dari logo */
+    width: 100%; /* Pastikan menu mengambil lebar penuh */
+  }
+
+  .main-menu li {
+    flex: 0 0 auto; /* Biarkan item mengambil lebar sesuai kontennya */
+    /* Atur margin/padding jika perlu untuk jarak antar item */
+  }
+
+  /* Ini adalah bagian kunci untuk memaksa item ke-4 (About) ke baris baru */
+  /* Kita akan atur lebar minimum untuk 3 item pertama */
+  .main-menu li:nth-child(-n+3) { /* Target item 1, 2, dan 3 */
+    min-width: calc((100% / 3) - 1.5rem); /* Kurangi 1.5rem dari gap */
+    /* Sesuaikan lebar ini agar 3 item muat dalam satu baris */
+    /* Mungkin perlu coba-coba nilai `calc()` */
+  }
+
+  /* Optional: Memberikan ruang lebih untuk item ke-4 dan ke-5 */
+  .main-menu li:nth-child(n+4) { /* Target item 4 (About) dan selanjutnya (Guestbook) */
+    min-width: calc((100% / 2) - 1.5rem); /* 2 item per baris */
+    /* Sesuaikan jika hanya ingin 2 item di baris kedua */
+  }
+
+  /* Menghilangkan ikon hamburger/toggle jika tema memilikinya (Bareblog mungkin tidak) */
+  /* Jika ada elemen lain yang menyembunyikan nav di mobile, mungkin perlu di-override */
+  /* .site-nav { display: block !important; } */
+}
