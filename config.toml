@@ -70,3 +70,14 @@ enableRobotsTXT = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+---
+
+## Penjelasan Penyesuaian
+
+Saya menambahkan dua bagian baru di akhir `config.toml` Anda:
+
+### 1. `[frontmatter]`
+```toml
+[frontmatter]
+  date = ["date", "publishDate", "lastmod"]
